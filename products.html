@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>BJJ Gear Inc.</h1>
-      <img src="./logo.webp" alt="logo" />
+      <img src="./logo.webp" alt="logo" id="logo" />
       <nav>
         <ul>
           <a href="./index.html"><li>Home</li></a>
@@ -18,18 +18,140 @@
           <a href="./contact.html"><li>Contact</li></a>
         </ul>
       </nav>
+      <img src="./menu-icon.png" id="smallMenu" />
     </header>
     <div class="wrapper-products">
+      <ul id="popupMenu" class="hidden">
+        <a href="./index.html"><li>Home</li></a>
+        <a href="./about.html"><li>About</li></a>
+        <a href="./contact.html"><li>Contact</li></a>
+      </ul>
       <!-- 
         ///////////////////////Content Section 1///////////////////////// -->
       <ul>
-        <a href="#"><li>Kimonos</li></a>
-        <a href="#"><li>Belts</li></a>
-        <a href="#"><li>Rash Guards</li></a>
-        <a href="#"><li>Mouth Guards</li></a>
+        <a href="#"><li id="kimono-link">Kimonos</li></a>
+        <a href="#"><li id="belt-link">Belts</li></a>
+        <a href="#"><li id="rashguard-link">Rash Guards</li></a>
+        <a href="#"><li id="mouthguard-link">Mouth Guards</li></a>
+        <a href="#"><li id="viewall-link">View All</li></a>
       </ul>
       <div class="content-1-products">
-        <script src="./products.js"></script>
+        <script src="./products.js" defer></script>
+        <!-- ///////////////////////////Item 1/////////////////////////////// -->
+        <div id="kimono" class="each-product">
+          <img src="./product-kimono.jpg" alt="Gi for sale" />
+          <h4>White Kimono</h4>
+          <p>$65.95</p>
+          <form
+            target="paypal"
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="business"
+              value="bryceperez31@gmail.com"
+            />
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="add" value="1" />
+            <input type="hidden" name="item_name" value="White Kimono" />
+            <input type="hidden" name="amount" value="65.95" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input
+              type="image"
+              name="submit"
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+              alt="Add to Cart"
+            />
+          </form>
+        </div>
+
+        <!-- ///////////////////////////Item 2/////////////////////////////// -->
+        <div id="belt" class="each-product">
+          <img src="./belt.webp" alt="Belt for sale" />
+          <h4>Black Belt</h4>
+          <p>$15.95</p>
+          <form
+            target="paypal"
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="business"
+              value="bryceperez31@gmail.com"
+            />
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="add" value="1" />
+            <input type="hidden" name="item_name" value="Black Belt" />
+            <input type="hidden" name="amount" value="15.95" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input
+              type="image"
+              name="submit"
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+              alt="Add to Cart"
+            />
+          </form>
+        </div>
+
+        <!-- ///////////////////////////Item 3/////////////////////////////// -->
+        <div id="rashguard" class="each-product">
+          <img src="./rashguard.webp" alt="Rashguard for sale" />
+          <h4>Cool Rashguard</h4>
+          <p>$22.95</p>
+          <form
+            target="paypal"
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="business"
+              value="bryceperez31@gmail.com"
+            />
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="add" value="1" />
+            <input type="hidden" name="item_name" value="rashguard" />
+            <input type="hidden" name="amount" value="22.95" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input
+              type="image"
+              name="submit"
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+              alt="Add to Cart"
+            />
+          </form>
+        </div>
+
+        <!-- ///////////////////////////Item 4/////////////////////////////// -->
+        <div id="mouthguard" class="each-product">
+          <img src="./mouthguard.jpg" alt="Mouth guard for sale" />
+          <h4>Venom Mouthguard</h4>
+          <p>$9.95</p>
+          <form
+            target="paypal"
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="business"
+              value="bryceperez31@gmail.com"
+            />
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="add" value="1" />
+            <input type="hidden" name="item_name" value="Venom Mouthguard" />
+            <input type="hidden" name="amount" value="9.95" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input
+              type="image"
+              name="submit"
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+              alt="Add to Cart"
+            />
+          </form>
+        </div>
       </div>
     </div>
 

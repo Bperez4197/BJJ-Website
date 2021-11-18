@@ -39,6 +39,11 @@ header h1, header nav ul h1, footer h1 {
           align-items: flex-end;
 }
 
+header #smallMenu, footer #smallMenu {
+  width: 0px;
+  height: 0px;
+}
+
 header img, header nav ul img, footer img {
   height: 100%;
   width: 150px;
@@ -93,6 +98,10 @@ ul a:hover:after {
           transform-origin: bottom left;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .wrapper {
   width: 85%;
   height: 2080px;
@@ -112,7 +121,7 @@ ul a:hover:after {
 
 .wrapper-products {
   width: 85%;
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +136,7 @@ ul a:hover:after {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 25px;
 }
 
 .wrapper-products ul {
@@ -136,12 +145,28 @@ ul a:hover:after {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 80%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-bottom: 50px;
+}
+
+.wrapper-products ul li {
+  margin: 7px 15px;
+}
+
+.wrapper-products #popupMenu {
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  margin-left: 90%;
+}
+
+.wrapper-products #popupMenu li {
+  background-color: black;
+  color: white;
 }
 
 .wrapper-contact {
@@ -319,7 +344,27 @@ ul a:hover:after {
   gap: 40px;
 }
 
+.content-1-products .each-product {
+  height: 105%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .content-1-products img {
+  height: 240px;
+  width: 240px;
+  margin-bottom: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 25px;
@@ -407,5 +452,53 @@ footer ul {
 
 footer ul a {
   color: white;
+}
+
+@media screen and (max-width: 1113px) {
+  .content-1-products {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .wrapper-products {
+    height: 100%;
+  }
+  .footer-blurb {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 847px) {
+  .content-1-products {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  header h1, header nav ul h1, footer h1 {
+    width: 50%;
+  }
+  header #logo, footer #logo {
+    visibility: hidden;
+  }
+  header #smallMenu, footer #smallMenu {
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+  }
+  header nav, header nav ul nav, footer nav {
+    visibility: hidden;
+  }
+  footer .footer-nav {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .content-1-products {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  header h1, header nav ul h1, footer h1 {
+    height: 100%;
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
