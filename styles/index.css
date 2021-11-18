@@ -376,6 +376,34 @@ ul a:hover:after {
   cursor: pointer;
 }
 
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.social img {
+  height: 35px;
+  width: 35px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 5px;
+}
+
+.addCart:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .content-2 {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -256,6 +256,25 @@ ul a {
   }
 }
 
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  img {
+    height: 35px;
+    width: 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 5px;
+  }
+}
+
+.addCart {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .content-2 {
   display: flex;
   justify-content: space-between;
