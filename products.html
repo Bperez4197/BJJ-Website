@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
     <title>BJJ Gear Inc.</title>
+    <script src="./products.js" defer></script>
   </head>
   <body>
     <header>
@@ -36,7 +37,6 @@
         <a href="#"><li id="viewall-link">View All</li></a>
       </ul>
       <div class="content-1-products">
-        <script src="./products.js" defer></script>
         <!-- ///////////////////////////Item 1/////////////////////////////// -->
         <div id="kimono" class="each-product">
           <img src="./product-kimono.jpg" alt="Gi for sale" />
@@ -188,6 +188,50 @@
             <input type="hidden" name="add" value="1" />
             <input type="hidden" name="item_name" value="Venom Mouthguard" />
             <input type="hidden" name="amount" value="9.95" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input
+              type="image"
+              name="submit"
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+              alt="Add to Cart"
+              class="addCart"
+            />
+          </form>
+          <div class="social">
+            <a href="http://facebook.com" target="_blank"
+              ><img src="./facebookIcon.png" alt="facebook"
+            /></a>
+            <a href="http://twitter.com" target="_blank"
+              ><img src="./twitterIcon.png" alt="twitter"
+            /></a>
+            <a href="http://linkedin.com" target="_blank"
+              ><img src="./linkedinIcon.png" alt="Linkedin"
+            /></a>
+            <a href="http://youtube.com" target="_blank"
+              ><img src="./youtubeIcon.png" alt="Youtube"
+            /></a>
+          </div>
+        </div>
+
+        <!-- ///////////////////////////Item 4/////////////////////////////// -->
+        <div id="floormats" class="each-product">
+          <img src="./floor-mats.jpg" alt="Floor mats for sale" />
+          <h4>Floor Mats</h4>
+          <p>$99.95</p>
+          <form
+            target="paypal"
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="business"
+              value="bryceperez31@gmail.com"
+            />
+            <input type="hidden" name="cmd" value="_cart" />
+            <input type="hidden" name="add" value="1" />
+            <input type="hidden" name="item_name" value="Floor Mats" />
+            <input type="hidden" name="amount" value="99.95" />
             <input type="hidden" name="currency_code" value="USD" />
             <input
               type="image"

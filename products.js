@@ -29,10 +29,11 @@ const kimonoBlock = document.querySelector("#kimono");
 const beltBlock = document.querySelector("#belt");
 const rgBlock = document.querySelector("#rashguard");
 const mgBlock = document.querySelector("#mouthguard");
+const floorBlock = document.querySelector("#floormats");
 const smallMenu = document.querySelector("#smallMenu");
 const popUpMenu = document.querySelector("#popupMenu");
 
-const blockArr = [kimonoBlock, beltBlock, rgBlock, mgBlock];
+const blockArr = [kimonoBlock, beltBlock, rgBlock, mgBlock, floorBlock];
 
 const hide = function () {
   for (let block of blockArr) {
